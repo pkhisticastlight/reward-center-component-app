@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "reward-center-components-lib": [
+        "dist/reward-center-components-lib"
+      ],
+      "reward-center-components-lib/*": [
+        "dist/reward-center-components-lib/*"
+      ]
+    }
   }
 }

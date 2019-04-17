@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "reward-center-components-lib": {
+      "root": "projects/reward-center-components-lib",
+      "sourceRoot": "projects/reward-center-components-lib/src",
+      "projectType": "library",
+      "prefix": "rc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/reward-center-components-lib/tsconfig.lib.json",
+            "project": "projects/reward-center-components-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/reward-center-components-lib/src/test.ts",
+            "tsConfig": "projects/reward-center-components-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/reward-center-components-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/reward-center-components-lib/tsconfig.lib.json",
+              "projects/reward-center-components-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "reward-center-components-app"
